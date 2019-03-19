@@ -4,6 +4,7 @@ import {Container, Tab, Tabs} from "react-bootstrap";
 import GameArea from "./games/GameArea";
 import PlayerArea from "./players/PlayerArea";
 import {RoomContext} from '../context'
+import {apiUrl} from "../../config.json";
 
 export interface PlayerInterface {
     id: number;
@@ -43,7 +44,7 @@ class Room extends React.Component<RouteComponentProps<any>, RoomInterface> {
             players: [],
             loading: true
         };
-        fetch(`http://192.168.0.101:8080/room/${this.props.match.params.room}`).then(
+        fetch(`${apiUrl}/room/${this.props.match.params.room}`).then(
             res => res.json()).then((room: RoomInterface) => {
                 this.setState({
                     id: room.id,
