@@ -1,22 +1,26 @@
 {
   "name": "bgtracker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "http://Zarux.github.io/BoardGameTracker",
   "dependencies": {
-    "@types/jest": "24.0.11",
-    "@types/node": "11.11.3",
-    "@types/react": "16.8.8",
-    "@types/react-dom": "16.8.2",
+    "bootstrap": "^4.3.1",
     "react": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-bootstrap-typeahead": "^4.0.0-alpha.5",
     "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8",
+    "reactcss": "^1.2.3",
     "typescript": "3.3.3333"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,5 +30,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@types/jest": "24.0.11",
+    "@types/node": "11.11.3",
+    "@types/react": "16.8.8",
+    "@types/react-bootstrap-typeahead": "^3.4.3",
+    "@types/react-dom": "16.8.2",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/reactcss": "^1.2.3",
+    "gh-pages": "^2.0.1"
+  }
 }
